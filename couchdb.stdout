@@ -1,0 +1,32 @@
+
+Apache CouchDB 1.6.0 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.33.0>] Apache CouchDB has started on http://0.0.0.0:5984/
+[info] [<0.102.0>] 172.17.0.1 - - GET / 200
+[info] [<0.102.0>] 172.17.0.1 - - GET /favicon.ico 200
+[info] [<0.111.0>] 127.0.0.1 - - GET / 200
+[info] [<0.112.0>] 127.0.0.1 - - GET / 200
+[error] [<0.1700.0>] Could not open file /var/lib/couchdb/pools.couch: no such file or directory
+[info] [<0.117.0>] 127.0.0.1 - - GET /pools 404
+[info] [<0.368.0>] 127.0.0.1 - - PUT /polls 201
+[error] [<0.1745.0>] Could not open file /var/lib/couchdb/pools.couch: no such file or directory
+[info] [<0.104.0>] 127.0.0.1 - - GET /pools 404
+[info] [<0.1744.0>] 127.0.0.1 - - GET /polls 200
+[info] [<0.161.0>] 127.0.0.1 - - POST /polls 415
+[info] [<0.160.0>] 127.0.0.1 - - POST /polls 201
+[info] [<0.462.0>] 127.0.0.1 - - GET /polls/2c3495d11713614cf80b0490aa0005c5 200
+[error] [<0.1901.0>] attempted upload of invalid JSON (set log_level to debug to log it)
+[info] [<0.1901.0>] 127.0.0.1 - - POST /polls 400
+[info] [<0.1760.0>] 127.0.0.1 - - GET /polls/2c3495d11713614cf80b0490aa0005c5 200
+[info] [<0.2238.0>] 127.0.0.1 - - POST /polls 201
+[info] [<0.108.0>] 127.0.0.1 - - POST /polls 409
+[info] [<0.1699.0>] 127.0.0.1 - - DELETE /polls/2c3495d11713614cf80b0490aa0005c5?rev=2-28f0a0a699b4f093b717df88c86f2e8c 200
+[info] [<0.2488.0>] 127.0.0.1 - - GET /polls/2c3495d11713614cf80b0490aa0005c5 404
+
+Apache CouchDB 1.6.0 (LogLevel=info) is starting.
+Apache CouchDB has started. Time to relax.
+[info] [<0.33.0>] Apache CouchDB has started on http://0.0.0.0:5984/
+[info] [<0.109.0>] 172.17.0.1 - - GET / 200
+[info] [<0.105.0>] 172.17.0.1 - - GET / 200
+[info] [<0.166.0>] 127.0.0.1 - - GET / 200
+[info] [<0.167.0>] 127.0.0.1 - - GET /polls 200

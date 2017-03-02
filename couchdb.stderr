@@ -1,0 +1,10 @@
+
+heart_beat_kill_pid = 357
+heart_beat_timeout = 11
+Terminated
+heart: Tue Feb 28 05:31:41 2017: Erlang has closed.
+sh: echo: I/O error
+heart: Tue Feb 28 05:31:41 2017: Executed "/usr/bin/couchdb -k" -> 256. Terminating.
+
+heart_beat_kill_pid = 53
+heart_beat_timeout = 11
