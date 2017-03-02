@@ -58,3 +58,13 @@ Apache CouchDB has started. Time to relax.
 [info] [<0.106.0>] 127.0.0.1 - - GET /polls/_all_docs?include_docs=true 200
 [info] [<0.9876.0>] 172.17.0.1 - - GET / 200
 [info] [<0.9876.0>] 172.17.0.1 - - GET /favicon.ico 200
+[info] [<0.10368.0>] 127.0.0.1 - - GET /polls/_all_docs?include_docs=true 200
+[info] [<0.10600.0>] 172.17.0.1 - - GET / 200
+[info] [<0.10600.0>] 172.17.0.1 - - GET /favicon.ico 200
+[info] [<0.22690.0>] 127.0.0.1 - - GET /polls/_all_docs?include_docs=true 200
+[info] [<0.10342.0>] 127.0.0.1 - - GET /polls/eb1bd37cf082c439a041bf500e001e35 200
+[info] [<0.10345.0>] 127.0.0.1 - - PUT /polls/eb1bd37cf082c439a041bf500e001e35?rev=1-dd1ad4e61fdd369472317b6d81c6a132 201
+[info] [<0.24200.0>] 127.0.0.1 - - GET /polls/_all_docs?include_docs=true 200
+[info] [<0.24199.0>] 127.0.0.1 - - GET /polls/eb1bd37cf082c439a041bf500e001e35 200
+[info] [<0.24207.0>] 127.0.0.1 - - PUT /polls/eb1bd37cf082c439a041bf500e001e35?rev=2-238f53022d4104e00634f762e5bb70e8 201
+[info] [<0.113.0>] 127.0.0.1 - - GET /polls/_all_docs?include_docs=true 200

@@ -125,7 +125,53 @@ router.post("/polls/create") {
 
 router.post("/polls/vote/:pollid/:option") {
   request, response, next in
-  defer { next() }
+  //ensure both parameters have values
+  guard let poll = request.parameters["pollid"], let option = request.parameters["option"] else {
+    try response.status(.badRequest).end()
+    return
+  }
+  //attempt to pull out the poll the user requested
+  database.retrieve(poll) { doc, error in
+    if let error = error {
+      //something went wrong!
+      let errorMessage = error.localizedDescription
+      let status = ["status": "error", "message": errorMessage]
+      let result = ["result": status]
+      let json = JSON(result)
+
+      response.status(.notFound).send(json: json)
+      next()
+    } else if let doc = doc {
+      //update the document
+      var newDocument = doc
+      let id = doc["_id"].stringValue
+      let rev = doc["_rev"].stringValue
+
+      if option == "1" {
+        newDocument["votes1"].intValue += 1
+      } else if option == "2" {
+        newDocument["votes2"].intValue += 1
+      }
+
+      database.update(id, rev: rev, document: newDocument) { rev, doc, error in
+        defer { next() }
+
+        if let error = error {
+          let status = ["status": "error"]
+          let result = ["result": status]
+          let json = JSON(result)
+
+          response.status(.conflict).send(json: json)
+        } else {
+          let status = ["status": "ok"]
+          let result = ["result": status]
+          let json = JSON(result)
+
+          response.status(.OK).send(json: json)
+        }
+      }
+    }
+  }
 }
 
 Kitura.addHTTPServer(onPort: 8090, with: router)
